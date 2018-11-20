@@ -11,7 +11,6 @@ Technology stack:
 * Hamcrest 1.3
 * Allure TestNG Report 2.8.1
 * Maven
-* Docker* (not mandatory)
 
 ## Test
 ### Preconditions
@@ -29,24 +28,12 @@ We need create three comments (https://gist.github.com/mjdch/7fc3ec4ad51852cded6
 * **EDIT_COMMENT** - comment which will be used in update operation
 * **DELETE_COMMENT** - comment which will be used in delete operation
 
-Example:
-```
-mvn clean test -DGET_COMMENT=2764260 -DEDIT_COMMENT=2764319 -DDELETE_COMMENT=2764318
-```
+
 ### Execution
-#### Manual
 Setup proper comments and pass it as in example above:
-mvn clean test -DGET_COMMENT=2764143 -DEDIT_COMMENT=2764143 -DDELETE_COMMENT=2764143
-#### Docker
-Additionally we can run tests inside docker container (Tested on MacOS)
-Build image:
-```
-docker build -t gisttest .
-```
-Run container with mounting target directory and passing ENV variables as above:
-```
-docker run -it --rm -v $(pwd)/target:/gist_test/target -e "GET_COMMENT=2764260" -e "EDIT_COMMENT=2764319" -e "DELETE_COMMENT=2764318" gisttest
-```
+`mvn clean test -DGET_COMMENT=2764349 -DEDIT_COMMENT=2764351 -DDELETE_COMMENT=2764350`
+
+:information_source: Provided IDs above should work for first run (the recent one while commiting README.md) so ust copy and paste command.
 
 ### Reports
 
