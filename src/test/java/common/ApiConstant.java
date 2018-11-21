@@ -8,7 +8,7 @@ public class ApiConstant {
 
     public static final String SINGLECOMMENT_API_PATH = "/gists/{gist_id}/comments/{comment_id}";
 
-    public static final String OAUTH2_TOKEN = "f74e2dd6a4e30ae07a4971a36accafeacd47430f";
+    public static final String OAUTH2_TOKEN = System.getProperty("OATH2_TOKEN");
 
     // Predefined gist_id
     public static final String GIST_ID = "aced6c34a0e894cfce32ce2b6e172a5e";

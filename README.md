@@ -28,10 +28,9 @@ We need create three comments (https://gist.github.com/mjdch/7fc3ec4ad51852cded6
 * **EDIT_COMMENT** - comment which will be used in update operation
 * **DELETE_COMMENT** - comment which will be used in delete operation
 
-
 ### Execution
-Setup proper comments and pass it as in example above:
-`mvn clean test -DGET_COMMENT=2764349 -DEDIT_COMMENT=2764351 -DDELETE_COMMENT=2764350`
+Setup proper comments and OATH2 token (GitHub doesn't allow to publish tokens in source code) and pass it as in example above:
+`mvn clean test -DOATH2_TOKEN=<TOKEN> -DGET_COMMENT=2764349 -DEDIT_COMMENT=2765823 -DDELETE_COMMENT=2765824`
 
 :information_source: Provided IDs above should work for first run (the recent one while commiting README.md) so ust copy and paste command.
 
